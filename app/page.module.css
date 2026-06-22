@@ -1,0 +1,298 @@
+/* ===== Home page section styles ===== */
+
+/* hero */
+.heroGrid {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: clamp(64px, 9vw, 120px) var(--pad);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 56px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.glowTopRight,
+.glowBottomLeft {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+.glowTopRight {
+  top: -25%;
+  right: -2%;
+  width: 640px;
+  height: 640px;
+  background: radial-gradient(circle, rgba(71, 160, 25, 0.2), transparent 62%);
+}
+.glowBottomLeft {
+  bottom: -30%;
+  left: -8%;
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(circle, rgba(246, 226, 255, 0.1), transparent 60%);
+}
+.heroEyebrow {
+  margin-bottom: 24px;
+}
+.heroTitle {
+  margin: 0 0 22px;
+}
+.heroSub {
+  max-width: 32em;
+  margin: 0;
+}
+.heroCtas {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 34px;
+}
+
+/* hero stat card */
+.statCardWrap {
+  display: flex;
+  justify-content: center;
+}
+.statCard {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  background: #fff;
+  border-radius: var(--r-card-lg);
+  padding: 32px;
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.3);
+}
+.statLive {
+  font: 600 11px/1 var(--font-sans);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--green);
+  margin-bottom: 22px;
+}
+.statBig {
+  font: 700 48px/1 var(--font-sans);
+  color: var(--navy);
+  letter-spacing: -0.02em;
+}
+.statSub {
+  font: 400 14px/1.5 var(--font-sans);
+  color: var(--text);
+  margin: 10px 0 26px;
+}
+.statDivider {
+  height: 1px;
+  background: var(--card-border);
+  margin-bottom: 22px;
+}
+.statRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+.statColValue {
+  font: 700 24px/1 var(--font-sans);
+  color: var(--ink);
+}
+.statColLabel {
+  font: 500 11px/1.2 var(--font-sans);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 8px;
+}
+
+/* trusted-by marquee */
+.trustSection {
+  background: #fff;
+  padding: 44px 0 48px;
+  border-bottom: 1px solid var(--card-border);
+  overflow: hidden;
+}
+.trustCaption {
+  text-align: center;
+  font: 500 13px/1 var(--font-sans);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 30px;
+  padding: 0 var(--pad);
+}
+.logoRow {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  padding-right: 56px;
+  white-space: nowrap;
+}
+.logo {
+  height: 34px;
+  width: auto;
+  flex: none;
+}
+
+/* credibility stats */
+.statsGrid {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 40px 32px;
+}
+.statValue {
+  font: 700 clamp(40px, 4.4vw, 56px) / 1 var(--font-sans);
+  color: var(--navy);
+  letter-spacing: -0.02em;
+}
+.statLabel {
+  font: 500 14px/1.45 var(--font-sans);
+  color: var(--text);
+  margin-top: 12px;
+}
+
+/* shared section intro */
+.intro {
+  max-width: 720px;
+  margin-bottom: 56px;
+}
+.introEyebrow {
+  margin-bottom: 18px;
+}
+.introTitle {
+  margin: 0 0 18px;
+}
+.introLead {
+  margin: 0;
+}
+
+/* services */
+.serviceCard {
+  background: var(--paper-2);
+  border: 1px solid var(--card-border);
+  border-radius: var(--r-card);
+  padding: 30px;
+}
+.iconChip {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+  font-weight: 700;
+  font-size: 20px;
+  color: #fff;
+}
+.serviceTitle {
+  font: 600 20px/1.25 var(--font-sans);
+  color: var(--ink);
+  margin: 0 0 10px;
+}
+.serviceDesc {
+  font: 400 15px/1.6 var(--font-sans);
+  color: var(--text);
+  margin: 0;
+}
+
+/* why */
+.whyHead {
+  max-width: 720px;
+  margin-bottom: 56px;
+}
+.whyGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px 56px;
+}
+.pillar {
+  border-top: 2px solid var(--green);
+  padding-top: 22px;
+}
+.pillarTitle {
+  font: 600 19px/1.3 var(--font-sans);
+  color: #fff;
+  margin: 0 0 10px;
+}
+.pillarDesc {
+  font: 400 15px/1.62 var(--font-sans);
+  color: var(--on-navy);
+  margin: 0;
+}
+
+/* section head with trailing link */
+.headRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+}
+.headText {
+  max-width: 640px;
+}
+.headLink {
+  font: 600 15px var(--font-sans);
+  color: var(--navy);
+  border-bottom: 2px solid var(--green);
+  padding-bottom: 3px;
+  white-space: nowrap;
+}
+
+/* grids */
+.casesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 22px;
+}
+.blogGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 22px;
+}
+
+/* team */
+.teamHead {
+  max-width: 640px;
+  margin-bottom: 44px;
+}
+.teamFrame {
+  border-radius: var(--r-card-lg);
+  overflow: hidden;
+  border: 1px solid var(--card-border);
+  height: clamp(320px, 40vw, 520px);
+}
+.teamImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 45%;
+}
+
+/* final cta */
+.ctaGlow {
+  position: absolute;
+  top: -30%;
+  right: -4%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(71, 160, 25, 0.2), transparent 62%);
+  pointer-events: none;
+}
+.ctaInner {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.ctaText {
+  margin: 20px 0 36px;
+}
+.ctaBtns {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+}

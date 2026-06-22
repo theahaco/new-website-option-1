@@ -1,0 +1,160 @@
+/* ===== Services (Expertise) page section styles ===== */
+
+/* hero glow — faint green radial, top-right (matches homepage hero) */
+.heroGlow {
+  position: absolute;
+  top: -25%;
+  right: -2%;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(71, 160, 25, 0.2), transparent 62%);
+  pointer-events: none;
+}
+.heroInner {
+  position: relative;
+  z-index: 1;
+  padding-block: clamp(64px, 8vw, 104px);
+}
+.heroEyebrow {
+  margin-bottom: 22px;
+}
+.heroTitle {
+  margin: 0 0 22px;
+  max-width: 18em;
+}
+.heroLead {
+  max-width: 40em;
+  margin: 0;
+}
+
+/* service blocks */
+.blocks {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(48px, 6vw, 80px);
+}
+.block {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+  gap: clamp(24px, 4vw, 56px);
+  align-items: start;
+}
+@media (max-width: 760px) {
+  .block {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+.blockNumber {
+  font: 600 13px/1 var(--font-sans);
+  color: var(--green);
+  margin-bottom: 14px;
+}
+.blockTitle {
+  font: 500 clamp(26px, 2.8vw, 34px) / 1.15 var(--font-serif);
+  margin: 0 0 14px;
+  color: var(--navy);
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.tag {
+  font: 500 12px var(--font-sans);
+  color: var(--link);
+  background: var(--chip);
+  border-radius: 99px;
+  padding: 6px 12px;
+}
+.label {
+  font: 600 15px/1.6 var(--font-sans);
+  color: var(--ink);
+  margin: 0 0 10px;
+}
+.body {
+  font: 400 16px/1.65 var(--font-sans);
+  color: var(--text);
+  margin: 0 0 22px;
+}
+.relatedLink {
+  font: 600 15px var(--font-sans);
+  color: var(--green);
+}
+.divider {
+  height: 1px;
+  background: var(--card-border);
+}
+
+/* how we work */
+.howHead {
+  max-width: 640px;
+  margin-bottom: 48px;
+}
+.howEyebrow {
+  margin-bottom: 18px;
+}
+.howTitle {
+  font: 500 clamp(28px, 3.2vw, 42px) / 1.12 var(--font-serif);
+  margin: 0;
+  color: var(--navy);
+  letter-spacing: -0.01em;
+}
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 24px;
+}
+.step {
+  background: var(--white);
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  padding: 24px;
+}
+.stepNumber {
+  font: 700 14px var(--font-sans);
+  color: var(--green);
+  margin-bottom: 10px;
+}
+.stepTitle {
+  font: 600 17px/1.3 var(--font-sans);
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+.stepDesc {
+  font: 400 14px/1.55 var(--font-sans);
+  color: var(--text);
+  margin: 0;
+}
+
+/* closing cta */
+.ctaGlow {
+  position: absolute;
+  top: -30%;
+  right: -4%;
+  width: 560px;
+  height: 560px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(71, 160, 25, 0.2), transparent 62%);
+  pointer-events: none;
+}
+.ctaInner {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.ctaTitle {
+  margin: 0 0 20px;
+}
+.ctaText {
+  margin: 0 0 34px;
+}
+.ctaBtns {
+  display: flex;
+  justify-content: center;
+}

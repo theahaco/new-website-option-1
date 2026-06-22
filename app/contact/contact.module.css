@@ -1,0 +1,73 @@
+/* ===== Contact page section styles ===== */
+
+/* faint green radial glow, top-right (mirrors homepage hero) */
+.glow {
+  position: absolute;
+  top: -20%;
+  right: -4%;
+  width: 620px;
+  height: 620px;
+  background: radial-gradient(circle, rgba(71, 160, 25, 0.18), transparent 62%);
+  pointer-events: none;
+  border-radius: 50%;
+}
+
+/* two-column layout */
+.grid {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: clamp(56px, 7vw, 96px) var(--pad);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: clamp(32px, 5vw, 64px);
+  position: relative;
+  z-index: 1;
+  align-items: start;
+}
+
+.heroEyebrow {
+  margin-bottom: 22px;
+}
+.title {
+  margin: 0 0 22px;
+}
+.lead {
+  max-width: 34em;
+  margin: 0 0 36px;
+}
+
+/* left-column detail blocks */
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.detailLabel {
+  font: 600 11px/1 var(--font-sans);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--green-light);
+  margin-bottom: 8px;
+}
+.detailValue {
+  font: 500 17px var(--font-sans);
+  color: #fff;
+}
+
+/* calendar embed placeholder */
+.calendar {
+  border: 1px dashed rgba(255, 255, 255, 0.35);
+  border-radius: 12px;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.04);
+  max-width: 360px;
+}
+.calendarTitle {
+  font: 600 14px var(--font-sans);
+  color: #fff;
+  margin-bottom: 6px;
+}
+.calendarNote {
+  font: 400 13px/1.5 var(--font-sans);
+  color: var(--green-light);
+}

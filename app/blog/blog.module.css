@@ -1,0 +1,126 @@
+/* ===== Blog index section styles ===== */
+
+/* sub-hero */
+.heroGlow {
+  position: absolute;
+  top: -25%;
+  right: -2%;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(71, 160, 25, 0.2), transparent 62%);
+  pointer-events: none;
+}
+.heroInner {
+  padding-top: clamp(64px, 8vw, 104px);
+  padding-bottom: clamp(64px, 8vw, 104px);
+  position: relative;
+  z-index: 1;
+}
+.heroTitle {
+  margin: 22px 0;
+  max-width: 16em;
+}
+.heroLead {
+  margin: 0;
+  max-width: 40em;
+}
+
+/* controls + grid body */
+.body {
+  padding-top: clamp(48px, 6vw, 80px);
+  padding-bottom: clamp(56px, 7vw, 96px);
+}
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.search {
+  font: 400 14px var(--font-sans);
+  color: var(--ink);
+  background: var(--paper-2);
+  border: 1px solid var(--control-border);
+  border-radius: var(--r-pill);
+  padding: 10px 18px;
+  min-width: 220px;
+}
+.search::placeholder {
+  color: var(--muted);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 32px 24px;
+}
+
+.empty {
+  font: 400 16px var(--font-sans);
+  color: var(--muted);
+  text-align: center;
+  padding: 48px 0;
+}
+
+/* static pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 56px;
+}
+.page {
+  font: 600 14px var(--font-sans);
+  color: var(--link);
+  background: #fff;
+  border: 1px solid var(--control-border);
+  border-radius: var(--r-btn);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pageActive {
+  color: #fff;
+  background: var(--navy);
+  border-color: var(--navy);
+}
+.pageNext {
+  width: auto;
+  padding: 0 16px;
+}
+
+/* cta */
+.ctaGlow {
+  position: absolute;
+  top: -30%;
+  right: -4%;
+  width: 560px;
+  height: 560px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(71, 160, 25, 0.2), transparent 62%);
+  pointer-events: none;
+}
+.ctaInner {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.ctaText {
+  margin: 20px 0 34px;
+}
+.ctaBtns {
+  display: flex;
+  justify-content: center;
+}

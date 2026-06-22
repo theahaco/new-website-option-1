@@ -1,0 +1,86 @@
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+.controls {
+  display: flex;
+  gap: 10px;
+}
+.arrow {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--r-pill);
+  border: 1px solid var(--control-border);
+  background: #fff;
+  color: var(--navy);
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s var(--ease);
+}
+.arrow:hover {
+  border-color: var(--navy);
+}
+
+.viewport {
+  overflow: hidden;
+}
+.track {
+  display: flex;
+  gap: 24px;
+  transition: transform 0.55s var(--ease);
+}
+.figure {
+  margin: 0;
+  flex: none;
+  width: calc(50% - 12px);
+  box-sizing: border-box;
+  background: var(--paper-2);
+  border: 1px solid var(--card-border);
+  border-radius: var(--r-card-lg);
+  padding: 36px;
+}
+@media (max-width: 760px) {
+  .figure {
+    width: 100%;
+  }
+}
+.quote {
+  font: 400 clamp(19px, 1.7vw, 23px) / 1.5 var(--font-serif);
+  color: var(--navy);
+  margin: 0 0 24px;
+}
+.quote.placeholder {
+  color: var(--muted);
+}
+.cap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--r-pill);
+  object-fit: cover;
+}
+.avatarPlaceholder {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--r-pill);
+  background: #e7e4db;
+  flex: none;
+}
+.name {
+  font: 600 15px var(--font-sans);
+  color: var(--ink);
+}
+.role {
+  font: 400 13px/1.4 var(--font-sans);
+  color: var(--text);
+}

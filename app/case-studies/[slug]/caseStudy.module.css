@@ -1,0 +1,208 @@
+/* ===== Case study template section styles ===== */
+
+/* hero */
+.heroGlow {
+  position: absolute;
+  top: -25%;
+  right: -2%;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(71, 160, 25, 0.2), transparent 62%);
+  pointer-events: none;
+}
+.heroInner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: clamp(56px, 7vw, 96px) var(--pad);
+  position: relative;
+  z-index: 1;
+}
+.backLink {
+  display: inline-block;
+  font: 600 13px var(--font-sans);
+  color: var(--green-light);
+  margin-bottom: 26px;
+}
+.heroEyebrow {
+  margin-bottom: 20px;
+}
+.heroTitle {
+  font: 500 clamp(32px, 4.4vw, 52px) / 1.08 var(--font-serif);
+  margin: 0 0 22px;
+}
+.heroLead {
+  max-width: 42em;
+  margin: 0;
+}
+
+/* meta strip */
+.metaStrip {
+  background: var(--paper-2);
+  border-bottom: 1px solid var(--card-border);
+  padding: 28px var(--pad);
+}
+.metaGrid {
+  max-width: 960px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 24px;
+}
+.metaLabel {
+  font: 600 11px/1 var(--font-sans);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+.metaValue {
+  font: 600 15px var(--font-sans);
+  color: var(--ink);
+}
+.metaValueStatus {
+  color: var(--green);
+}
+
+/* body */
+.body {
+  background: var(--white);
+  padding: clamp(48px, 6vw, 88px) var(--pad);
+}
+.measure {
+  max-width: 760px;
+  margin: 0 auto;
+}
+.block {
+  margin-bottom: 48px;
+}
+.block:last-child {
+  margin-bottom: 0;
+}
+.blockTitle {
+  font: 500 clamp(24px, 2.6vw, 32px) / 1.2 var(--font-serif);
+  color: var(--navy);
+  margin: 0 0 16px;
+}
+.para {
+  font: 400 17px/1.7 var(--font-sans);
+  color: var(--link);
+  margin: 0 0 16px;
+}
+.para:last-child {
+  margin-bottom: 0;
+}
+
+/* architecture highlights card */
+.archCard {
+  background: var(--paper-2);
+  border: 1px solid var(--card-border);
+  border-radius: var(--r-card);
+  padding: 32px;
+}
+.archEyebrow {
+  font: 600 13px/1 var(--font-sans);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--green);
+  margin: 0 0 20px;
+}
+.archList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.archItem {
+  font: 400 16px/1.55 var(--font-sans);
+  color: var(--link);
+  padding-left: 22px;
+  position: relative;
+}
+.archDot {
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 7px;
+  height: 7px;
+  border-radius: var(--r-pill);
+  background: var(--green);
+}
+
+/* outcome metrics */
+.outcomeTitle {
+  font: 500 clamp(24px, 2.6vw, 32px) / 1.2 var(--font-serif);
+  color: var(--navy);
+  margin: 0 0 24px;
+}
+.metricsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 28px;
+}
+.metricValue {
+  font: 700 clamp(34px, 4vw, 46px) / 1 var(--font-sans);
+  color: var(--navy);
+  letter-spacing: -0.02em;
+}
+.metricLabel {
+  font: 500 14px/1.45 var(--font-sans);
+  color: var(--text);
+  margin-top: 10px;
+}
+
+/* tech used */
+.techEyebrow {
+  font: 600 13px/1 var(--font-sans);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 16px;
+}
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* testimonial */
+.testimonial {
+  margin: 0;
+  background: var(--navy);
+  border-radius: var(--r-card-lg);
+  padding: 40px;
+  color: #fff;
+}
+.quote {
+  font: 400 clamp(20px, 2vw, 26px) / 1.5 var(--font-serif);
+  margin: 0 0 22px;
+}
+.cite {
+  font: 500 14px/1.5 var(--font-sans);
+  color: var(--on-navy);
+}
+
+/* closing CTA */
+.cta {
+  background: var(--paper-2);
+  border-top: 1px solid var(--card-border);
+  padding: clamp(56px, 7vw, 96px) var(--pad);
+}
+.ctaInner {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+.ctaTitle {
+  font: 500 clamp(28px, 3.4vw, 44px) / 1.12 var(--font-serif);
+  margin: 0 0 18px;
+  color: var(--navy);
+  letter-spacing: -0.01em;
+}
+.ctaText {
+  font: 400 clamp(16px, 1.5vw, 18px) / 1.6 var(--font-sans);
+  color: var(--text);
+  margin: 0 0 32px;
+}

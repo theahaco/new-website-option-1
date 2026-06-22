@@ -1,0 +1,69 @@
+/* ===== Case studies index section styles ===== */
+
+/* hero */
+.heroGlow {
+  position: absolute;
+  top: -25%;
+  right: -2%;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(71, 160, 25, 0.2), transparent 62%);
+  pointer-events: none;
+}
+.heroInner {
+  position: relative;
+  z-index: 1;
+}
+.heroEyebrow {
+  margin-bottom: 22px;
+}
+.heroTitle {
+  margin: 0 0 22px;
+  max-width: 16em;
+}
+.heroLead {
+  margin: 0;
+  max-width: 40em;
+}
+
+/* filters + grid */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+.empty {
+  font: 400 16px var(--font-sans);
+  color: var(--muted);
+  text-align: center;
+  padding: 48px 0;
+}
+
+/* final cta */
+.ctaGlow {
+  position: absolute;
+  top: -30%;
+  right: -4%;
+  width: 560px;
+  height: 560px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(71, 160, 25, 0.2), transparent 62%);
+  pointer-events: none;
+}
+.ctaInner {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.ctaText {
+  margin: 20px 0 34px;
+}

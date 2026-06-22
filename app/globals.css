@@ -1,0 +1,356 @@
+/* ============================================================
+   The Aha Company — design tokens + global utilities
+   Idiom: brand values live as CSS custom properties (--navy,
+   --green, --paper, ...). Components compose semantic utility
+   classes (.section, .eyebrow, .h2, .btn, .card, ...) and reach
+   for tokens via var(). next/font sets --font-spectral /
+   --font-space-grotesk on <html>.
+   ============================================================ */
+
+:root {
+  /* Color */
+  --navy: #1a3b60;
+  --navy-deep: #13283f;
+  --ink: #16263b;
+  --green: #47a019;
+  --green-hover: #5fa834;
+  --green-light: #9fc98a;
+  --green-pale: #e6f2dc;
+  --paper: #f7f6f2;
+  --paper-2: #fbfaf7;
+  --chip: #f1efe8;
+  --card-border: #eceae3;
+  --control-border: #e3e1d9;
+  --text: #5a6b7e;
+  --link: #3c5571;
+  --muted: #9aa7b4;
+  --on-navy: #c7d2de;
+  --on-navy-muted: #8fa0b2;
+  --footer-muted: #6f8295;
+  --white: #fff;
+
+  /* Decorative card gradients (from handoff) */
+  --grad-violet: linear-gradient(135deg, #e9e2f2, #d9ceec);
+  --grad-mauve: linear-gradient(135deg, #d6bdbe, #c9aeb0);
+  --grad-green: linear-gradient(135deg, #e6f2dc, #d2e8c2);
+  --grad-navy: linear-gradient(135deg, #1a3b60, #2d5483);
+  --grad-slate: linear-gradient(135deg, #3c5571, #5a6b7e);
+  --grad-green-solid: linear-gradient(135deg, #47a019, #5fa834);
+
+  /* Type — next/font injects the family vars on <html> */
+  --font-sans: var(--font-space-grotesk), system-ui, -apple-system, sans-serif;
+  --font-serif: var(--font-spectral), Georgia, "Times New Roman", serif;
+
+  /* Layout */
+  --maxw: 1200px;
+  --pad: 32px;
+  --section-pad: clamp(72px, 9vw, 120px);
+  --section-pad-sm: clamp(56px, 7vw, 88px);
+
+  /* Radius */
+  --r-card: 16px;
+  --r-card-lg: 18px;
+  --r-btn: 8px;
+  --r-pill: 99px;
+
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ---------- reset ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  font-family: var(--font-sans);
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+img,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button {
+  font: inherit;
+  color: inherit;
+}
+::selection {
+  background: var(--green);
+  color: #fff;
+}
+:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+/* ---------- layout ---------- */
+.container {
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding-inline: var(--pad);
+}
+.section {
+  padding: var(--section-pad) var(--pad);
+}
+.section--sm {
+  padding: var(--section-pad-sm) var(--pad);
+}
+.surface-white {
+  background: var(--white);
+}
+.surface-paper {
+  background: var(--paper);
+}
+.surface-paper-2 {
+  background: var(--paper-2);
+}
+/* Navy band — heroes, "why" sections, CTAs. Decorative radial
+   glows are added per-section as absolutely-positioned children. */
+.navy {
+  background: var(--navy);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.navy-deep {
+  background: var(--navy-deep);
+}
+
+/* ---------- type ---------- */
+.eyebrow {
+  font: 600 12px/1 var(--font-sans);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--green);
+}
+.eyebrow--light {
+  color: var(--green-light);
+}
+.h1 {
+  font: 500 clamp(38px, 5vw, 62px) / 1.05 var(--font-serif);
+  letter-spacing: -0.01em;
+  color: var(--navy);
+}
+.h2 {
+  font: 500 clamp(30px, 3.6vw, 46px) / 1.1 var(--font-serif);
+  letter-spacing: -0.01em;
+  color: var(--navy);
+}
+.h3 {
+  font: 600 19px/1.3 var(--font-sans);
+  color: var(--ink);
+}
+.navy .h1,
+.navy .h2,
+.navy .h3 {
+  color: #fff;
+}
+.lead {
+  font: 400 clamp(16px, 1.4vw, 19px) / 1.62 var(--font-sans);
+  color: var(--text);
+}
+.navy .lead {
+  color: var(--on-navy);
+}
+
+/* ---------- buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 30px;
+  border-radius: var(--r-btn);
+  font: 600 16px var(--font-sans);
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: filter 0.2s var(--ease), background 0.2s var(--ease),
+    border-color 0.2s var(--ease), transform 0.12s var(--ease);
+}
+.btn:active {
+  transform: translateY(1px);
+}
+.btn--primary {
+  background: var(--green);
+  color: #fff;
+}
+.btn--primary:hover {
+  filter: brightness(1.07);
+}
+.btn--ghost {
+  background: transparent;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.32);
+}
+.btn--ghost:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+}
+.btn--secondary {
+  background: #fff;
+  color: var(--navy);
+  border-color: var(--control-border);
+}
+.btn--secondary:hover {
+  border-color: var(--navy);
+}
+.btn--nav {
+  background: var(--navy);
+  color: #fff;
+  padding: 11px 20px;
+  font-size: 14px;
+}
+.btn--nav:hover {
+  filter: brightness(1.12);
+}
+.btn--sm {
+  padding: 11px 20px;
+  font-size: 14px;
+}
+.btn__arrow {
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* ---------- cards / chips / pills ---------- */
+.card {
+  background: #fff;
+  border: 1px solid var(--card-border);
+  border-radius: var(--r-card);
+}
+.card--paper {
+  background: var(--paper-2);
+}
+.card-hover {
+  transition: border-color 0.2s var(--ease), transform 0.2s var(--ease);
+}
+.card-hover:hover {
+  border-color: #dcd9cf;
+  transform: translateY(-2px);
+}
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: var(--r-pill);
+  background: var(--chip);
+  color: var(--link);
+  font: 500 13px var(--font-sans);
+}
+.pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 18px;
+  border-radius: var(--r-pill);
+  font: 600 14px var(--font-sans);
+  background: #fff;
+  color: var(--link);
+  border: 1px solid var(--control-border);
+  cursor: pointer;
+  transition: background 0.2s var(--ease), color 0.2s var(--ease),
+    border-color 0.2s var(--ease);
+}
+.pill:hover {
+  border-color: var(--navy);
+}
+.pill.is-active {
+  background: var(--navy);
+  color: #fff;
+  border-color: var(--navy);
+}
+
+/* ---------- services grid ---------- */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+@media (max-width: 900px) {
+  .services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 600px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- logo marquee ---------- */
+@keyframes ahaMarquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.marquee {
+  position: relative;
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 8%,
+    #000 92%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 8%,
+    #000 92%,
+    transparent
+  );
+}
+.marquee__track {
+  display: flex;
+  width: max-content;
+  animation: ahaMarquee 36s linear infinite;
+}
+
+/* ---------- scroll reveal (progressive enhancement) ----------
+   Elements are visible by default (no-JS / reduced-motion safe).
+   The inline head script sets html[data-reveal-ready] only when
+   motion is allowed; RevealProvider then adds .is-visible. */
+html[data-reveal-ready] [data-aha-reveal] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+}
+html[data-reveal-ready] [data-aha-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .marquee__track {
+    animation: none !important;
+  }
+}
