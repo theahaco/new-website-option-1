@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { asset } from "@/lib/site";
 import styles from "./Footer.module.css";
 
 const EXPERTISE = [
@@ -29,7 +30,7 @@ export default function Footer() {
         <div className={styles.cols}>
           <div className={styles.brand}>
             <img
-              src="/assets/aha-logo-horizontal-white.png"
+              src={asset("/assets/aha-logo-horizontal-white.png")}
               alt="The Aha Company"
               width={128}
               height={32}

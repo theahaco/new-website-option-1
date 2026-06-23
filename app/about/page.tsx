@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ButtonLink from "@/components/ButtonLink";
+import { asset } from "@/lib/site";
 import styles from "./about.module.css";
 
 export const metadata: Metadata = {
@@ -81,7 +82,7 @@ export default function About() {
       <section className={`surface-white ${styles.teamWrap}`}>
         <div className={styles.teamFrame} data-aha-reveal>
           <img
-            src="/assets/team-meridian-rio-crop.jpg"
+            src={asset("/assets/team-meridian-rio-crop.jpg")}
             alt="The Aha Company team working together around a table"
             className={styles.teamImg}
           />
