@@ -13,7 +13,6 @@ import styles from "./page.module.css";
 const LOGOS = [
   { src: "/assets/logos/stellar.png", alt: "Stellar" },
   { src: "/assets/logos/sgforge.png", alt: "Société Générale–FORGE" },
-  { src: "/assets/logos/ripple.png", alt: "Ripple" },
   { src: "/assets/logos/filecoin.png", alt: "Filecoin" },
   { src: "/assets/logos/lifi.png", alt: "LI.FI" },
   { src: "/assets/logos/delubac.png", alt: "Delubac & Cie" },
