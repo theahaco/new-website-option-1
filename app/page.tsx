@@ -110,20 +110,6 @@ const TESTIMONIALS: Testimonial[] = [
     role: "PM, Developer Experience & RWA Tokenization, Stellar Development Foundation",
     avatar: asset("/assets/jane-wang.jpg"),
   },
-  {
-    quote:
-      "“[Placeholder quote, add a testimonial from a financial-institution client here once cleared for public display.]”",
-    name: "[Name]",
-    role: "[Role, Institution]",
-    placeholder: true,
-  },
-  {
-    quote:
-      "“[Placeholder quote, add a testimonial from a Web3 or ecosystem partner here once cleared for public display.]”",
-    name: "[Name]",
-    role: "[Role, Project]",
-    placeholder: true,
-  },
 ];
 
 const featured = ["eurcv-stablecoin", "lifi-stellar", "mmf-tokenization"]
@@ -340,7 +326,7 @@ export default function Home() {
           </div>
           <div className={styles.teamFrame} data-aha-reveal>
             <img
-              src={asset("/assets/team-meridian-rio-crop.jpg")}
+              src={asset("/assets/team-photo.jpg")}
               alt="The Aha Company team working together around a table"
               className={styles.teamImg}
             />
@@ -362,8 +348,8 @@ export default function Home() {
             <ButtonLink href="/contact" variant="primary" arrow>
               Schedule a call
             </ButtonLink>
-            <ButtonLink href="mailto:hello@ahalabs.dev" variant="ghost">
-              hello@ahalabs.dev
+            <ButtonLink href="mailto:hello@theaha.co" variant="ghost">
+              hello@theaha.co
             </ButtonLink>
           </div>
         </div>

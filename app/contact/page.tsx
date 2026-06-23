@@ -30,8 +30,8 @@ export default function ContactPage() {
           <div className={styles.details}>
             <div>
               <div className={styles.detailLabel}>Email</div>
-              <a href="mailto:hello@ahalabs.dev" className={styles.detailValue}>
-                hello@ahalabs.dev
+              <a href="mailto:hello@theaha.co" className={styles.detailValue}>
+                hello@theaha.co
               </a>
             </div>
             <div>
@@ -42,13 +42,12 @@ export default function ContactPage() {
             </div>
             <div>
               <div className={styles.detailLabel}>Prefer to book directly?</div>
-              {/* Calendar embed placeholder: drop a Calendly / Cal.com embed here */}
-              <div className={styles.calendar}>
-                <div className={styles.calendarTitle}>Calendar embed</div>
-                <div className={styles.calendarNote}>
-                  Replace this block with your Calendly or Cal.com inline embed.
-                </div>
-              </div>
+              <iframe
+                src="https://calendly.com/enzo-theahaco/30-minutes-chat"
+                className={styles.calendar}
+                title="Schedule a 30-minute call with The Aha Company"
+                loading="lazy"
+              />
             </div>
           </div>
         </div>

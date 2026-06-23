@@ -68,22 +68,28 @@ by replacing these modules.
   role, ecosystem, status, challenge, solution, architectureHighlights,
   outcomeMetrics, techUsed, testimonial`
 
-## Placeholders to fill before launch
+## Deployment
 
-- **Team photo** — `public/assets/team-meridian-rio-crop.jpg` is currently a
-  **branded placeholder** (the real photo exceeded the design tool's 256 KiB
-  export cap). Drop in the real cropped group photo at that path.
-- **Testimonials** — Tomer Weller + Jane Wang quotes are real; two homepage
-  carousel slides are marked `[Placeholder]` pending clearance.
-- **Case-study testimonial** — the EURCV / FORGE quote is a placeholder.
-- **Blog/article content** — author, date, and body are placeholders.
-- **Calendar embed** — the Contact page has a dashed placeholder; drop in
-  Calendly / Cal.com.
-- **Forms** — contact + newsletter are front-end only; wire to Netlify Forms /
-  Formspree / a custom endpoint.
-- **Social links** — footer GitHub / LinkedIn are `#`.
-- **Contact email** — `hello@ahalabs.dev` used throughout; confirm.
-- **Canonical domain** — set in `app/layout.tsx` (`SITE_URL`) and `app/sitemap.ts`.
+Deploys to **GitHub Pages** via `.github/workflows/deploy.yml` on every push to
+`main`, serving at `https://theahaco.github.io/new-website-option-1/`. Site
+origin and base path live in `lib/site.ts` (`SITE_ORIGIN`, `BASE_PATH`); the
+workflow injects the project base path so assets resolve under the sub-path. For
+a custom domain, set `NEXT_PUBLIC_SITE_ORIGIN` (empty base path) and add a
+`CNAME`.
+
+## Still to wire before launch
+
+- **Forms** — contact + newsletter are front-end only; wire to a backend
+  (Netlify Forms / Formspree / custom endpoint).
+- **Blog/article content** — author, date, and body are placeholders (seeded
+  posts kept intentionally for now).
+- **Team photo** — real photo is in place at `public/assets/team-photo.jpg`; it
+  carries a faint photographer watermark, swap the clean licensed export.
+- **Custom domain** — on GitHub Pages for now (see Deployment).
+
+Resolved: team photo, contact email (`hello@theaha.co`), Calendly embed, footer
+social links (GitHub / LinkedIn / X), testimonial clearance, brand icons + OG
+image.
 
 ## Conventions (client direction)
 

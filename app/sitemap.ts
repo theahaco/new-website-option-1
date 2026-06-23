@@ -1,8 +1,9 @@
 import type { MetadataRoute } from "next";
 import { caseStudySlugs } from "@/content/caseStudies";
 import { postSlugs } from "@/content/posts";
+import { SITE_URL } from "@/lib/site";
 
-const SITE = "https://theahacompany.com";
+const SITE = SITE_URL;
 
 export const dynamic = "force-static";
 

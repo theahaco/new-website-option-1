@@ -10,3 +10,12 @@ export function asset(path: string): string {
   const p = path.startsWith("/") ? path : `/${path}`;
   return `${BASE_PATH}${p}`;
 }
+
+// Deployment origin (scheme + host), no trailing slash. Currently GitHub
+// Pages; override via NEXT_PUBLIC_SITE_ORIGIN for a custom domain.
+export const SITE_ORIGIN =
+  process.env.NEXT_PUBLIC_SITE_ORIGIN ?? "https://theahaco.github.io";
+
+// Full public base URL including any project sub-path. Use for sitemap
+// entries and canonical links; use SITE_ORIGIN for metadataBase.
+export const SITE_URL = `${SITE_ORIGIN}${BASE_PATH}`;

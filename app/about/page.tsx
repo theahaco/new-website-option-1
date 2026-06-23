@@ -82,7 +82,7 @@ export default function About() {
       <section className={`surface-white ${styles.teamWrap}`}>
         <div className={styles.teamFrame} data-aha-reveal>
           <img
-            src={asset("/assets/team-meridian-rio-crop.jpg")}
+            src={asset("/assets/team-photo.jpg")}
             alt="The Aha Company team working together around a table"
             className={styles.teamImg}
           />
