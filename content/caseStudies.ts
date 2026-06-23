@@ -73,13 +73,7 @@ export const caseStudies: CaseStudy[] = [
       { value: "100%", label: "Source-verified contracts" },
     ],
     techUsed: ["Soroban", "Rust", "Stellar", "SEP-41", "Source verification"],
-    testimonial: {
-      quote:
-        "[Placeholder quote, add a testimonial from the FORGE team here once cleared for public display.]",
-      name: "[Name]",
-      role: "[Role, Société Générale–FORGE]",
-      placeholder: true,
-    },
+    testimonial: null,
   },
   {
     slug: "mmf-tokenization",

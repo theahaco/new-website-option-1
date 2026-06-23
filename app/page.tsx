@@ -7,6 +7,7 @@ import TestimonialCarousel, {
 } from "@/components/TestimonialCarousel";
 import { caseStudies } from "@/content/caseStudies";
 import { posts } from "@/content/posts";
+import { asset } from "@/lib/site";
 import styles from "./page.module.css";
 
 const LOGOS = [
@@ -100,28 +101,14 @@ const TESTIMONIALS: Testimonial[] = [
       "“When we undertook the biggest update to Stellar since its inception, fully programmable smart contracts, we knew we needed an industry-leading developer experience. We searched far and wide for capable teams. We found one.”",
     name: "Tomer Weller",
     role: "Chief Product Officer, Stellar Development Foundation",
-    avatar: "/assets/tomer-weller.jpg",
+    avatar: asset("/assets/tomer-weller.jpg"),
   },
   {
     quote:
       "“They consistently fill critical gaps in the ecosystems they work in. I'm impressed by their speed, capacity, and commitment to quality. For true co-creators who bring ideas to life, look no further than The Aha Company.”",
     name: "Jane Wang",
     role: "PM, Developer Experience & RWA Tokenization, Stellar Development Foundation",
-    avatar: "/assets/jane-wang.jpg",
-  },
-  {
-    quote:
-      "“[Placeholder quote, add a testimonial from a financial-institution client here once cleared for public display.]”",
-    name: "[Name]",
-    role: "[Role, Institution]",
-    placeholder: true,
-  },
-  {
-    quote:
-      "“[Placeholder quote, add a testimonial from a Web3 or ecosystem partner here once cleared for public display.]”",
-    name: "[Name]",
-    role: "[Role, Project]",
-    placeholder: true,
+    avatar: asset("/assets/jane-wang.jpg"),
   },
 ];
 
@@ -133,7 +120,7 @@ function LogoRow({ ariaHidden }: { ariaHidden?: boolean }) {
   return (
     <div className={styles.logoRow} aria-hidden={ariaHidden}>
       {LOGOS.map((l) => (
-        <img key={l.alt} src={l.src} alt={l.alt} className={styles.logo} />
+        <img key={l.alt} src={asset(l.src)} alt={l.alt} className={styles.logo} />
       ))}
     </div>
   );
@@ -339,7 +326,7 @@ export default function Home() {
           </div>
           <div className={styles.teamFrame} data-aha-reveal>
             <img
-              src="/assets/team-meridian-rio-crop.jpg"
+              src={asset("/assets/team-photo.jpg")}
               alt="The Aha Company team working together around a table"
               className={styles.teamImg}
             />
@@ -361,8 +348,8 @@ export default function Home() {
             <ButtonLink href="/contact" variant="primary" arrow>
               Schedule a call
             </ButtonLink>
-            <ButtonLink href="mailto:hello@ahalabs.dev" variant="ghost">
-              hello@ahalabs.dev
+            <ButtonLink href="mailto:hello@theaha.co" variant="ghost">
+              hello@theaha.co
             </ButtonLink>
           </div>
         </div>

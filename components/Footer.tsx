@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { asset } from "@/lib/site";
 import styles from "./Footer.module.css";
 
 const EXPERTISE = [
@@ -29,7 +30,7 @@ export default function Footer() {
         <div className={styles.cols}>
           <div className={styles.brand}>
             <img
-              src="/assets/aha-logo-horizontal-white.png"
+              src={asset("/assets/aha-logo-horizontal-white.png")}
               alt="The Aha Company"
               width={128}
               height={32}
@@ -97,14 +98,32 @@ export default function Footer() {
             © 2025 The Aha Company · United States · France · Brazil
           </div>
           <div className={styles.social}>
-            <a href="mailto:hello@ahalabs.dev" className={styles.link}>
-              hello@ahalabs.dev
+            <a href="mailto:hello@theaha.co" className={styles.link}>
+              hello@theaha.co
             </a>
-            <a href="#" className={styles.link}>
+            <a
+              href="https://github.com/theahaco"
+              className={styles.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               GitHub
             </a>
-            <a href="#" className={styles.link}>
+            <a
+              href="https://www.linkedin.com/company/theahaco/"
+              className={styles.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               LinkedIn
+            </a>
+            <a
+              href="https://x.com/theahaco"
+              className={styles.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              X
             </a>
           </div>
         </div>

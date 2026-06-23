@@ -54,20 +54,13 @@
   color: #fff;
 }
 
-/* calendar embed placeholder */
+/* Calendly inline embed */
 .calendar {
-  border: 1px dashed rgba(255, 255, 255, 0.35);
+  display: block;
+  width: 100%;
+  min-height: 640px;
+  border: 0;
   border-radius: 12px;
-  padding: 22px;
-  background: rgba(255, 255, 255, 0.04);
-  max-width: 360px;
-}
-.calendarTitle {
-  font: 600 14px var(--font-sans);
-  color: #fff;
-  margin-bottom: 6px;
-}
-.calendarNote {
-  font: 400 13px/1.5 var(--font-sans);
-  color: var(--green-light);
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
 }

@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import ButtonLink from "./ButtonLink";
+import { asset } from "@/lib/site";
 import styles from "./Nav.module.css";
 
 const LINKS = [
@@ -25,7 +26,7 @@ export default function Nav() {
       <nav className={styles.nav} aria-label="Primary">
         <Link href="/" className={styles.logo} aria-label="The Aha Company — home">
           <img
-            src="/assets/aha-logo-horizontal-blue.png"
+            src={asset("/assets/aha-logo-horizontal-blue.png")}
             alt="The Aha Company"
             width={232}
             height={58}

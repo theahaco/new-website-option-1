@@ -4,6 +4,7 @@ import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import RevealProvider from "@/components/RevealProvider";
+import { SITE_ORIGIN, SITE_URL } from "@/lib/site";
 
 const spectral = Spectral({
   subsets: ["latin"],
@@ -20,11 +21,8 @@ const spaceGrotesk = Space_Grotesk({
   display: "swap",
 });
 
-// Placeholder canonical origin — swap for the production domain.
-const SITE_URL = "https://theahacompany.com";
-
 export const metadata: Metadata = {
-  metadataBase: new URL(SITE_URL),
+  metadataBase: new URL(SITE_ORIGIN),
   title: {
     default: "The Aha Company — Blockchain infrastructure, built to institutional standard",
     template: "%s · The Aha Company",
@@ -61,9 +59,12 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: revealReadyScript }} />
       </head>
       <body>
+        <a href="#main-content" className="skip-link">
+          Skip to content
+        </a>
         <RevealProvider />
         <Nav />
-        <main>{children}</main>
+        <main id="main-content">{children}</main>
         <Footer />
       </body>
     </html>
